@@ -15,5 +15,5 @@ yarn install && yarn start
 
 #### In the Server directory, you can run:
 ```sh
-    yarn install && node index.js "<youtube live chat url>"
+yarn install && node index.js "<youtube live chat url>"
 ```
