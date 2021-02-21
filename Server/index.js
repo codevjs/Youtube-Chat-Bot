@@ -2,8 +2,15 @@ const express  = require('express');
 const socketIo = require("socket.io");
 const Yt       = require("./module/ytlivechat");
 
-const url      = "https://www.youtube.com/live_chat?is_popout=1&v=h8f0tnt7je4" // ganti dengan url popup live chat
-const yt       =  new Yt(url);
+// console.log(process.argv[2].split("=")[1])
+
+if (process.argv[2] === undefined) {
+
+    throw new Error('link argument is required. try node index.js "<youtube live chat url>"');
+}
+
+const url      =  process.argv[2]
+const yt       = new Yt(url);
 const app      = express();
 const port     = 8000;
 const server   = app.listen(port, () => console.log(`listening on ${port}`));
