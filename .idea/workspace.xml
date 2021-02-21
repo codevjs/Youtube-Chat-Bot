@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b7cda99-d04c-41b1-8bd0-131172a5ff60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Client" beforeDir="false" afterPath="$PROJECT_DIR$/Client" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Client/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +45,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613909555694</updated>
-      <workItem from="1613909557371" duration="10965000" />
+      <workItem from="1613909557371" duration="11259000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1613924430508</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613924430508</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Commit">
+      <created>1613924470273</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613924470273</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First Commit">
+      <created>1613924559067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613924559068</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,5 +84,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>
