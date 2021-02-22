@@ -4,8 +4,7 @@
     <list default="true" id="4b7cda99-d04c-41b1-8bd0-131172a5ff60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/module/ytlivechat.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/modules/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Client" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -66,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613909555694</updated>
       <workItem from="1613909557371" duration="14388000" />
-      <workItem from="1613963530268" duration="11442000" />
+      <workItem from="1613963530268" duration="13758000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1613924430508</created>
@@ -138,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613989187084</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactor">
+      <created>1613996666505</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613996666505</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +166,7 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="animations when a React component enters or leaves the DOM" />
-    <option name="LAST_COMMIT_MESSAGE" value="animations when a React component enters or leaves the DOM" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
 </project>
