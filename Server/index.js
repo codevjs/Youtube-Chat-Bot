@@ -1,6 +1,6 @@
 const express  = require('express');
 const socketIo = require("socket.io");
-const Yt       = require("./module/ytlivechat");
+const Yt       = require("./modules");
 
 if (process.argv[2] === undefined) {
 
@@ -26,9 +26,7 @@ io.on('connection', async (socket) => {
     });
 });
 
-(async () => {
-    await yt.fetch(list => {
+yt.fetch(list => {
 
-        io.emit("live_chat", list);
-    });
-})()
+    io.emit("live_chat", list);
+});
