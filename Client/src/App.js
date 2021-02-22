@@ -58,15 +58,13 @@ function App() {
 
         localStorage.setItem("pinDefaultStyle", JSON.stringify(pinDefaultStyle));
 
-        setTimeout(() => {
-            form.setFieldsValue({
-                avatarBackground  : pinStyle.photo.background,
-                nameBackground    : pinStyle.name.background,
-                nameColor         : pinStyle.name.color,
-                messageBackground : pinStyle.message.background,
-                messageColor      : pinStyle.message.color,
-            });
-        }, 1000)
+        form.setFieldsValue({
+            avatarBackground  : pinStyle.photo.background,
+            nameBackground    : pinStyle.name.background,
+            nameColor         : pinStyle.name.color,
+            messageBackground : pinStyle.message.background,
+            messageColor      : pinStyle.message.color,
+        });
     }
 
     useEffect(() => {
