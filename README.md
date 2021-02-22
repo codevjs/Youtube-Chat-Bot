@@ -2,18 +2,39 @@
 
 This is project for scraping youtube live stream chat. It is bootstrapped with [Create React App](https://github.com/facebook/create-react-app) & [puppeteer](https://developers.google.com/web/tools/puppeteer). 
 
-## How to run
+## Install
+- Install all dependencies with
+```sh
+yarn install
+```
+or
+```sh
+npm install
+```
 
+## How to run
+- Clone the repository using HTTPS 
 ```sh
 git clone https://github.com/codevjs/Youtube-Chat-Bot.git <folder name>
 ```
 
-#### In the Client directory, you can run:
+#### In the Client directory
+- Running in dev mode
 ```sh
-yarn install && yarn start
+yarn start
 ```
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+- Running in production mode
+```sh
+yarn production
+```
+The server address will be displayed to you as http://localhost:8080
 
 #### In the Server directory, you can run:
 ```sh
-yarn install && node index.js "<youtube live chat url>"
+node index.js "<youtube live chat url>"
 ```

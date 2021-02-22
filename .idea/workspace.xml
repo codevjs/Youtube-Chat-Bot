@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b7cda99-d04c-41b1-8bd0-131172a5ff60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Client" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -63,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613909555694</updated>
       <workItem from="1613909557371" duration="14388000" />
-      <workItem from="1613963530268" duration="14121000" />
+      <workItem from="1613963530268" duration="15036000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1613924430508</created>
@@ -149,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613999773245</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update README.md">
+      <created>1614000745595</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1614000745595</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update README.md">
+      <created>1614000800351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614000800351</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,10 +186,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <MESSAGE value="Update README.md" />
     <MESSAGE value="animations when a React component enters or leaves the DOM" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Animations when a React component enters or leaves the DOM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Animations when a React component enters or leaves the DOM" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
 </project>
