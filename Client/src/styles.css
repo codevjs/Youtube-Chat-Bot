@@ -1,0 +1,22 @@
+.fade-enter .list, .fade-enter .list-selected {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.fade-enter-active .list, .fade-enter-active .list-selected {
+    opacity: 1;
+    transform: translateX(0%);
+}
+.fade-exit .list, .fade-exit .list-selected {
+    opacity: 1;
+    transform: translateX(0%);
+}
+.fade-exit-active .list, .fade-exit-active .list-selected {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.fade-enter-active .list,
+.fade-exit-active .list,
+.fade-enter-active .list-selected,
+.fade-exit-active .list-selected {
+    transition: opacity 500ms, transform 500ms;
+}
