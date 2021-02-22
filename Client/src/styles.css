@@ -63,3 +63,10 @@
     transition: opacity 500ms, transform 500ms;
 }
 
+.ant-list-split .ant-list-item {
+    border-bottom: none;
+}
+
+.ant-form-item {
+    margin-bottom: 10px;
+}
