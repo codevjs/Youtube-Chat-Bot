@@ -8,9 +8,9 @@ import "./styles.css";
 function App() {
 
     const [isLoading, setLoading]       = useState(true);
+    const [isBannerShow, setBannerShow] = useState(true);
     const [data, setData]               = useState([]);
     const [selected, setSelected]       = useState([]);
-    const [isBannerShow, setBannerShow] = useState(true);
 
     useEffect(() => {
 
@@ -26,9 +26,7 @@ function App() {
     }, []);
 
     return (
-        <div
-            style={{ maxWidth : 1200, margin : "auto",}}
-        >
+        <div style={{ maxWidth : 1200, margin : "auto"}}>
             <Row>
                 <Col span={24}>
                     <Row
@@ -41,11 +39,11 @@ function App() {
                         align="bottom"
                     >
                         <Col span={24}>
-                            <SwitchTransition mode={"in-out"}>
+                            <SwitchTransition mode={ isBannerShow ? "in-out" : "out-in"}>
                                 <CSSTransition
                                     key={isBannerShow}
                                     addEndListener={(node, done) => { node.addEventListener("transitionend", done, false) }}
-                                    classNames="fade"
+                                    classNames={isBannerShow ? "fade2" : "fade3"}
                                 >
                                     <div className={"list-container"}>
                                         {
@@ -60,7 +58,7 @@ function App() {
                                                             <div
                                                                 className={"list list-selected"}
                                                                 style={{
-                                                                    padding : "0 20px",
+                                                                    padding : "20px",
                                                                     background: "white",
                                                                     borderBottom : "1px solid #ddd"
                                                                 }}
@@ -146,14 +144,6 @@ function App() {
                             />
                         </div>
                         <Row gutter={[10, 30]}>
-                            {/*<Col span={24}>*/}
-                            {/*    <Input.Search*/}
-                            {/*        placeholder="live chat url"*/}
-                            {/*        allowClear*/}
-                            {/*        enterButton="Get"*/}
-                            {/*        size="large"*/}
-                            {/*    />*/}
-                            {/*</Col>*/}
                             <Col span={12}>
                                 <Button
                                     style={{width : "100%"}}
