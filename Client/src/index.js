@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Home from './Home';
+import View from "./View";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+        <Switch>
+            <Route exact path={'/'} component={Home} />
+            <Route exact path={'/view'} component={View} />
+        </Switch>
+    </BrowserRouter>,
+    document.getElementById('root')
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

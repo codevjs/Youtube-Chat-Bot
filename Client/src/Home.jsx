@@ -21,13 +21,14 @@ const pinDefaultStyle = {
 if (!localStorage.getItem("pinDefaultStyle"))
     localStorage.setItem("pinDefaultStyle", JSON.stringify(pinDefaultStyle));
 
-function App() {
+function Home() {
 
     const [isLoading, setLoading]       = useState(true);
     const [isBannerShow, setBannerShow] = useState(true);
     const [isDrawerShow, setDrawerShow] = useState(false);
     const [data, setData]               = useState([]);
     const [selected, setSelected]       = useState([]);
+    const [socketIo, setSocketIo]       = useState();
     const [pinStyle, setPinStyle]       = useState(JSON.parse(localStorage.getItem("pinDefaultStyle")));
     const [form]                        = Form.useForm();
 
@@ -77,6 +78,8 @@ function App() {
 
             setLoading(false);
         });
+
+        setSocketIo(socket);
 
     }, []);
 
@@ -201,6 +204,8 @@ function App() {
                                     onClick={() => {
                                         setSelected([item])
                                         setBannerShow(false);
+                                        socketIo?.emit("selected", [item]);
+                                        socketIo?.emit("bannerShow", false);
                                     }}
                                 >
                                     <List.Item.Meta
@@ -238,7 +243,10 @@ function App() {
                                     size={"large"}
                                     // type={"primary"}
                                     // ghost={true}
-                                    onClick={() => setBannerShow(true)}
+                                    onClick={() => {
+                                        setBannerShow(true);
+                                        socketIo?.emit("bannerShow", true);
+                                    }}
                                 >
                                     Show Banner
                                 </Button>
@@ -249,7 +257,10 @@ function App() {
                                     size={"large"}
                                     // type={"primary"}
                                     // ghost={true}
-                                    onClick={() => setBannerShow(false)}
+                                    onClick={() => {
+                                        setBannerShow(false);
+                                        socketIo?.emit("bannerShow", false);
+                                    }}
                                 >
                                     Hide Banner
                                 </Button>
@@ -263,6 +274,8 @@ function App() {
                                     onClick={() => {
                                         setBannerShow(true);
                                         setSelected([]);
+                                        socketIo?.emit("bannerShow", true);
+                                        socketIo?.emit("selected", []);
                                     }}
                                 >
                                     Clear Pinned
@@ -354,4 +367,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;
