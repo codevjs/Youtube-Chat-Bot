@@ -75,7 +75,7 @@ function View() {
                                                         <div className={"list-selected-container"}>
                                                             <div
                                                                 className={"list list-selected"}
-                                                                style={{padding : "10px", width : "70%", margin : "auto"}}
+                                                                style={{padding : "10px 10px 20px", width : "70%", margin : "auto"}}
                                                             >
                                                                 <List
                                                                     style={{borderBottom : "none"}}
