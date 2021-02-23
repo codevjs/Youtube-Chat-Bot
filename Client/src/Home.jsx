@@ -21,13 +21,14 @@ const pinDefaultStyle = {
 if (!localStorage.getItem("pinDefaultStyle"))
     localStorage.setItem("pinDefaultStyle", JSON.stringify(pinDefaultStyle));
 
-function App() {
+function Home() {
 
     const [isLoading, setLoading]       = useState(true);
     const [isBannerShow, setBannerShow] = useState(true);
     const [isDrawerShow, setDrawerShow] = useState(false);
     const [data, setData]               = useState([]);
     const [selected, setSelected]       = useState([]);
+    const [socketIo, setSocketIo]       = useState();
     const [pinStyle, setPinStyle]       = useState(JSON.parse(localStorage.getItem("pinDefaultStyle")));
     const [form]                        = Form.useForm();
 
@@ -49,12 +50,16 @@ function App() {
 
         setPinStyle(styles);
 
+        socketIo.emit("style", styles);
+
         localStorage.setItem("pinDefaultStyle", JSON.stringify(styles));
     }
 
     const resetStyle = () => {
 
         setPinStyle(pinDefaultStyle);
+
+        socketIo.emit("style", pinDefaultStyle);
 
         localStorage.setItem("pinDefaultStyle", JSON.stringify(pinDefaultStyle));
 
@@ -77,6 +82,8 @@ function App() {
 
             setLoading(false);
         });
+
+        setSocketIo(socket);
 
     }, []);
 
@@ -112,7 +119,7 @@ function App() {
                                                         <div className={"list-selected-container"}>
                                                             <div
                                                                 className={"list list-selected"}
-                                                                style={{padding : "10px 22%"}}
+                                                                style={{padding : "10px", width : "70%", margin : "auto"}}
                                                             >
                                                                 <List
                                                                     style={{borderBottom : "none"}}
@@ -139,7 +146,7 @@ function App() {
                                                                                         marginTop : 10,
                                                                                         padding : "5px 0 5px 40px",
                                                                                         marginLeft : "-45px",
-                                                                                        width : 500,
+                                                                                        width : "90%",
                                                                                         borderRadius : 5
                                                                                     }}>
                                                                                         {item.authorName}
@@ -152,10 +159,12 @@ function App() {
                                                                                             color : pinStyle.message.color,
                                                                                             marginTop : "-5px",
                                                                                             marginLeft : "-45px",
-                                                                                            padding : "5px 0 5px 40px",
+                                                                                            padding : "5px 0 10px 40px",
                                                                                             paddingTop : 10,
-                                                                                            width : 550,
-                                                                                            borderRadius : 5
+                                                                                            width : "100%",
+                                                                                            borderRadius : 5,
+                                                                                            fontSize :"1.5em",
+                                                                                            lineHeight : "1.2em"
                                                                                         }}
                                                                                     >
                                                                                         {item.message}
@@ -171,7 +180,7 @@ function App() {
                                                 </SwitchTransition>
                                             ) : (
                                                 <div className={"list"}>
-                                                    <img style={{width : "100%"}} src={"https://via.placeholder.com/1920x120.png"} alt={""} />
+                                                    <img style={{width : "100%"}} src={"/images/banner.jpg"} alt={""} />
                                                 </div>
                                             )
                                         }
@@ -201,6 +210,8 @@ function App() {
                                     onClick={() => {
                                         setSelected([item])
                                         setBannerShow(false);
+                                        socketIo?.emit("selected", [item]);
+                                        socketIo?.emit("bannerShow", false);
                                     }}
                                 >
                                     <List.Item.Meta
@@ -227,7 +238,7 @@ function App() {
                         <div style={{marginBottom : 20}}>
                             <img
                                 style={{width : "100%"}}
-                                src={"https://via.placeholder.com/1920x120.png"}
+                                src={"/images/banner.jpg"}
                                 alt={""}
                             />
                         </div>
@@ -238,7 +249,10 @@ function App() {
                                     size={"large"}
                                     // type={"primary"}
                                     // ghost={true}
-                                    onClick={() => setBannerShow(true)}
+                                    onClick={() => {
+                                        setBannerShow(true);
+                                        socketIo?.emit("bannerShow", true);
+                                    }}
                                 >
                                     Show Banner
                                 </Button>
@@ -249,7 +263,10 @@ function App() {
                                     size={"large"}
                                     // type={"primary"}
                                     // ghost={true}
-                                    onClick={() => setBannerShow(false)}
+                                    onClick={() => {
+                                        setBannerShow(false);
+                                        socketIo?.emit("bannerShow", false);
+                                    }}
                                 >
                                     Hide Banner
                                 </Button>
@@ -263,6 +280,8 @@ function App() {
                                     onClick={() => {
                                         setBannerShow(true);
                                         setSelected([]);
+                                        socketIo?.emit("bannerShow", true);
+                                        socketIo?.emit("selected", []);
                                     }}
                                 >
                                     Clear Pinned
@@ -354,4 +373,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;
