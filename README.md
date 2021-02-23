@@ -1,6 +1,6 @@
 # Youtube Live Stream Chat Bot
 
-This is project for scraping youtube live stream chat. It is bootstrapped with [Create React App](https://github.com/facebook/create-react-app) & [puppeteer](https://developers.google.com/web/tools/puppeteer). 
+This is project for scraping youtube live stream chat. It is bootstrapped with [Create React Home](https://github.com/facebook/create-react-app) & [puppeteer](https://developers.google.com/web/tools/puppeteer). 
 
 ## Get Started
 #### Set up the development environment

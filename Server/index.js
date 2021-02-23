@@ -21,10 +21,18 @@ io.on('connection', async (socket) => {
 
     //Whenever someone disconnects this piece of code executed
     socket.on('disconnect', () => {
-
         console.log('a user disconnected');
     });
+
+    socket.on("selected", selected => {
+        io.emit("selected", selected);
+    });
+
+    socket.on("bannerShow", value => {
+        io.emit("bannerShow", value);
+    });
 });
+
 
 yt.fetch(list => {
 
