@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b7cda99-d04c-41b1-8bd0-131172a5ff60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/src/View.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/View.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/View.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="dual_display" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Client" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -73,7 +68,7 @@
       <updated>1613909555694</updated>
       <workItem from="1613909557371" duration="14388000" />
       <workItem from="1613963530268" duration="22123000" />
-      <workItem from="1614089699957" duration="1467000" />
+      <workItem from="1614089699957" duration="4014000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1613924430508</created>
@@ -187,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614011708762</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="new feature dual display">
+      <created>1614091432573</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614091432573</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +213,7 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="Animations when a React component enters or leaves the DOM" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="new feature dual display" />
+    <option name="LAST_COMMIT_MESSAGE" value="new feature dual display" />
   </component>
 </project>

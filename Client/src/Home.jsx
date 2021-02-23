@@ -50,12 +50,16 @@ function Home() {
 
         setPinStyle(styles);
 
+        socketIo.emit("style", styles);
+
         localStorage.setItem("pinDefaultStyle", JSON.stringify(styles));
     }
 
     const resetStyle = () => {
 
         setPinStyle(pinDefaultStyle);
+
+        socketIo.emit("style", pinDefaultStyle);
 
         localStorage.setItem("pinDefaultStyle", JSON.stringify(pinDefaultStyle));
 
@@ -115,7 +119,7 @@ function Home() {
                                                         <div className={"list-selected-container"}>
                                                             <div
                                                                 className={"list list-selected"}
-                                                                style={{padding : "10px 22%"}}
+                                                                style={{padding : "10px", width : "70%", margin : "auto"}}
                                                             >
                                                                 <List
                                                                     style={{borderBottom : "none"}}
@@ -142,7 +146,7 @@ function Home() {
                                                                                         marginTop : 10,
                                                                                         padding : "5px 0 5px 40px",
                                                                                         marginLeft : "-45px",
-                                                                                        width : 500,
+                                                                                        width : "90%",
                                                                                         borderRadius : 5
                                                                                     }}>
                                                                                         {item.authorName}
@@ -155,10 +159,12 @@ function Home() {
                                                                                             color : pinStyle.message.color,
                                                                                             marginTop : "-5px",
                                                                                             marginLeft : "-45px",
-                                                                                            padding : "5px 0 5px 40px",
+                                                                                            padding : "5px 0 10px 40px",
                                                                                             paddingTop : 10,
-                                                                                            width : 550,
-                                                                                            borderRadius : 5
+                                                                                            width : "100%",
+                                                                                            borderRadius : 5,
+                                                                                            fontSize :"1.5em",
+                                                                                            lineHeight : "1.2em"
                                                                                         }}
                                                                                     >
                                                                                         {item.message}
@@ -174,7 +180,7 @@ function Home() {
                                                 </SwitchTransition>
                                             ) : (
                                                 <div className={"list"}>
-                                                    <img style={{width : "100%"}} src={"https://via.placeholder.com/1920x120.png"} alt={""} />
+                                                    <img style={{width : "100%"}} src={"/images/banner.jpg"} alt={""} />
                                                 </div>
                                             )
                                         }
@@ -232,7 +238,7 @@ function Home() {
                         <div style={{marginBottom : 20}}>
                             <img
                                 style={{width : "100%"}}
-                                src={"https://via.placeholder.com/1920x120.png"}
+                                src={"/images/banner.jpg"}
                                 alt={""}
                             />
                         </div>
