@@ -31,6 +31,10 @@ io.on('connection', async (socket) => {
     socket.on("bannerShow", value => {
         io.emit("bannerShow", value);
     });
+
+    socket.on("style", value => {
+        io.emit("style", value);
+    });
 });
 
 

@@ -25,7 +25,7 @@ function View() {
 
     const [isBannerShow, setBannerShow] = useState(true);
     const [selected, setSelected]       = useState([]);
-    const [pinStyle]                    = useState(JSON.parse(localStorage.getItem("pinDefaultStyle")));
+    const [pinStyle, setPinStyle]       = useState(JSON.parse(localStorage.getItem("pinDefaultStyle")));
 
     useEffect(() => {
 
@@ -40,6 +40,11 @@ function View() {
 
             setBannerShow(value);
         });
+
+        socket.on("style", value => {
+
+            setPinStyle(value);
+        })
 
     }, []);
 

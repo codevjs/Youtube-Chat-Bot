@@ -50,12 +50,16 @@ function Home() {
 
         setPinStyle(styles);
 
+        socketIo.emit("style", styles);
+
         localStorage.setItem("pinDefaultStyle", JSON.stringify(styles));
     }
 
     const resetStyle = () => {
 
         setPinStyle(pinDefaultStyle);
+
+        socketIo.emit("style", pinDefaultStyle);
 
         localStorage.setItem("pinDefaultStyle", JSON.stringify(pinDefaultStyle));
 
