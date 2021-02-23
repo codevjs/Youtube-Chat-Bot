@@ -114,7 +114,7 @@ function View() {
                                                                                             color : pinStyle.message.color,
                                                                                             marginTop : "-5px",
                                                                                             marginLeft : "-45px",
-                                                                                            padding : "5px 0 10px 40px",
+                                                                                            padding : "5px 40px 10px",
                                                                                             paddingTop : 10,
                                                                                             width : "100%",
                                                                                             borderRadius : 5,
