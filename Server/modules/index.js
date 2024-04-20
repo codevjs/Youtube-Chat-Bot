@@ -43,10 +43,10 @@ class YoutubeLiveChat {
 
                     list.forEach(item => {
 
-                        let photo      = item.children[0].children[0].src;
+                        let photo      = item.children[0].children[1].src;
                         let timestamp  = item.children[1].children[0].textContent;
-                        let authorName = item.children[1].children[1].children[0].textContent;
-                        let message    = item.children[1].children[2].textContent;
+                        let authorName = item.children[1].children[1].children[1].textContent;
+                        let message    = item.children[1].children[3].textContent;
 
                         records.push({
                             photo,
